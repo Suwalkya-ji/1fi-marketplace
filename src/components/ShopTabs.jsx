@@ -5,7 +5,7 @@ export function ShopTabs() {
   const { activeTab, setActiveTab } = useApp();
 
   return (
-    <div className="relative z-[10] -mt-8 mb-1 px-5 w-full">
+    <div className="relative z-[10] -mt-8 mb-1 px-2 w-full">
       <div 
         className="bg-[#F2EEFE] border border-[#E5DAFB] p-1.5 rounded-full flex items-center justify-between shadow-md w-full"
         role="tablist"
@@ -48,7 +48,7 @@ export function ShopTabs() {
 
         {/* Tab 3: 1Fi Marketplace */}
         <button 
-          className={`flex-1 py-2.5 px-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 relative flex items-center justify-center gap-1.5 ${
+          className={`flex-1 py-2.5 px-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 relative flex items-center justify-center ${
             activeTab === 'marketplace' 
               ? 'bg-white text-[#4A15D1] shadow-sm font-bold' 
               : 'text-gray-600 hover:text-purple-900'
@@ -59,9 +59,6 @@ export function ShopTabs() {
           id="tab-btn-marketplace"
         >
           <span>Marketplace</span>
-          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[10px] font-extrabold px-1.5 py-0.2 rounded-full uppercase tracking-tight">
-            New
-          </span>
           {activeTab === 'marketplace' && (
             <span className="absolute bottom-1 w-6 h-0.5 bg-[#4A15D1] rounded-full" />
           )}
